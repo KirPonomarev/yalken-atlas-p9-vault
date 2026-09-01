@@ -1,2 +1,3 @@
-# yalken-atlas-p9-vault
-Encrypted owner-review Yalken Atlas P9 prototype
+# Yalken Atlas Vault
+
+Public shell with an encrypted browser-only Atlas payload. Never commit plaintext Atlas assets here.
