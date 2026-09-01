@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f3ec">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'; img-src 'self' data: blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'; worker-src 'self'; style-src 'self'; script-src 'self'">
+  <title>Yalken Atlas · защищённый вход</title>
+  <link rel="stylesheet" href="./unlock.css">
+</head>
+<body>
+  <main id="main-content">
+    <div class="meridian" aria-hidden="true"></div>
+    <p class="kicker">YALKEN · ATLAS</p>
+    <h1>Продолжить работу</h1>
+    <p class="intro">Личный макет зашифрован. Введи один пароль — этот браузер запомнит доступ.</p>
+    <form id="unlock-form">
+      <label for="password">Пароль</label>
+      <div class="field">
+        <input id="password" name="password" type="password" autocomplete="current-password" required aria-invalid="false" aria-describedby="password-error" autofocus>
+        <button class="reveal" type="button" aria-label="Показать пароль">Показать</button>
+      </div>
+      <p class="error" id="password-error" aria-live="polite"></p>
+      <button class="submit" type="submit">Открыть Atlas</button>
+    </form>
+    <p class="trust">Atlas расшифровывается только внутри этого браузера. На хостинге лежит лишь зашифрованный контейнер.</p>
+  </main>
+  <script id="vault-config" type="application/json">{"format":"YALKEN_ENCRYPTED_ATLAS_V1","version":"fde617e9b891","vault":"vault-fde617e9b891.bin","salt":"fec6dd7db2a5f095fbaf9d00db904695","iv":"920a7cc734065b26e8d70905","iterations":350000}</script>
+  <script src="./unlock.js" defer></script>
+</body>
+</html>
